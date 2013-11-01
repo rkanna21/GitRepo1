@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+
+		<meta charset="utf-8"> 
+
+
+		<style type="text/css">
+			.imagen { position: relative; display: inline-block}
+			.imagen img { border-radius: 4px;  box-shadow: inset 0px 4px 0px rgba(0, 0, 0, .6); display: block;}
+
+
+			.imagen:after {
+				content:"";
+				position: absolute;
+				left:0;
+				top:0;
+				right:0;
+				bottom: 0;
+				border-radius:4px;
+				box-shadow:inset 1px 1px 10px rgba(0, 0, 0, .6);
+			}
+
+			.imagen:before {
+				content:"";
+				position: absolute;
+				right:20px;
+				top:-20px;
+				width:0px;
+				height:0px;
+				border:10px solid transparent;
+				border-bottom:10px solid orange;
+			}
+
+			.lst-nav > li { display: inline-block; margin-left:20px;}
+				.lst-nav > li:first-child { margin: 0;}
+				.lst-nav > li:last-child { position: relative; }
+				.lst-nav > li:last-child:before {
+					content:"";
+					width:1px;
+					position: absolute;
+					top:5px;
+					bottom:5px;
+					background: orange;
+					left: -10px;
+
+				}
+
+		</style>
+
+	</head>
+	<body style="margin:50px;">		
+
+			<div class="imagen">
+				<span></span>
+				<img src="images/img-photo.png" />
+			</div>
+
+			<ul class="lst-nav">
+				<li>hola</li>
+				<li>hola2</li>
+			</ul>
+
+
+	</body>
+</html>
